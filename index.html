@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Properties | Modern Real Estate Solutions</title>
+    <meta name="description" content="Sai Properties - Your gateway to modern living. Discover premium properties with innovative solutions.">
+    <link rel="stylesheet" href="sai-properties-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-letter">S</span>
+                <span class="logo-letter">A</span>
+                <span class="logo-letter">I</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="brand">
+                <div class="brand-icon">S</div>
+                <div class="brand-text">
+                    <span class="brand-name">Sai Properties</span>
+                    <span class="brand-tagline">Modern Living</span>
+                </div>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#featured" class="nav-item">Featured</a>
+                <a href="#explore" class="nav-item">Explore</a>
+                <a href="#why-us" class="nav-item">Why Us</a>
+                <a href="#gallery" class="nav-item">Gallery</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="search-btn" id="searchBtn">🔍</button>
+                <a href="tel:08390676759" class="cta-btn">Get in Touch</a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-background">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <div class="hero-label">Premium Real Estate</div>
+                    <h1 class="hero-title">
+                        Discover Your
+                        <span class="gradient-text">Perfect Space</span>
+                    </h1>
+                    <p class="hero-description">
+                        Experience modern living with Sai Properties. We bring you curated properties that blend luxury, comfort, and innovation in Navi Mumbai's finest locations.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#featured" class="btn-primary">
+                            <span>View Properties</span>
+                            <div class="btn-icon">→</div>
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <span>Schedule Visit</span>
+                        </a>
+                    </div>
+                    <div class="hero-metrics">
+                        <div class="metric">
+                            <div class="metric-value" data-count="800">0</div>
+                            <div class="metric-label">Properties Listed</div>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric">
+                            <div class="metric-value" data-count="2500">0</div>
+                            <div class="metric-label">Happy Families</div>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric">
+                            <div class="metric-value" data-count="20">0</div>
+                            <div class="metric-label">Years Trusted</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-card card-1">
+                        <div class="card-icon">🏢</div>
+                        <div class="card-text">
+                            <div class="card-title">Modern Apartments</div>
+                            <div class="card-subtitle">Starting ₹65L</div>
+                        </div>
+                    </div>
+                    <div class="visual-card card-2">
+                        <div class="card-icon">🏘️</div>
+                        <div class="card-text">
+                            <div class="card-title">Luxury Villas</div>
+                            <div class="card-subtitle">Premium Living</div>
+                        </div>
+                    </div>
+                    <div class="visual-card card-3">
+                        <div class="card-icon">🏪</div>
+                        <div class="card-text">
+                            <div class="card-title">Commercial Spaces</div>
+                            <div class="card-subtitle">Prime Locations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="featured-section" id="featured">
+        <div class="section-container">
+            <div class="section-heading">
+                <div class="section-tag">Handpicked Selection</div>
+                <h2 class="section-title">Featured Properties</h2>
+                <p class="section-desc">Explore our premium collection of properties designed for modern living</p>
+            </div>
+
+            <div class="featured-grid">
+                <div class="property-item large" data-aos="fade-up">
+                    <div class="property-image">
+                        <div class="property-overlay"></div>
+                        <div class="property-tag premium">Premium</div>
+                        <div class="property-emoji">🏢</div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-header">
+                            <h3 class="property-name">Skyline Residency</h3>
+                            <div class="property-price">₹1.2 Cr</div>
+                        </div>
+                        <p class="property-location">📍 Kharghar, Navi Mumbai</p>
+                        <div class="property-specs">
+                            <span class="spec">3 BHK</span>
+                            <span class="spec">1850 sq ft</span>
+                            <span class="spec">Ready to Move</span>
+                        </div>
+                        <a href="#contact" class="property-link">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="property-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="property-image">
+                        <div class="property-overlay"></div>
+                        <div class="property-tag sale">For Sale</div>
+                        <div class="property-emoji">🏠</div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-header">
+                            <h3 class="property-name">Green Valley Homes</h3>
+                            <div class="property-price">₹78 Lakhs</div>
+                        </div>
+                        <p class="property-location">📍 Sector 35D, Kharghar</p>
+                        <div class="property-specs">
+                            <span class="spec">2 BHK</span>
+                            <span class="spec">1100 sq ft</span>
+                        </div>
+                        <a href="#contact" class="property-link">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="property-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="property-image">
+                        <div class="property-overlay"></div>
+                        <div class="property-tag sale">For Sale</div>
+                        <div class="property-emoji">🏘️</div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-header">
+                            <h3 class="property-name">Vista Gardens</h3>
+                            <div class="property-price">₹1.5 Cr</div>
+                        </div>
+                        <p class="property-location">📍 Sector 34C, Kharghar</p>
+                        <div class="property-specs">
+                            <span class="spec">4 BHK Villa</span>
+                            <span class="spec">2200 sq ft</span>
+                        </div>
+                        <a href="#contact" class="property-link">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Categories -->
+    <section class="explore-section" id="explore">
+        <div class="section-container">
+            <div class="section-heading centered">
+                <div class="section-tag">Browse by Category</div>
+                <h2 class="section-title">Explore Options</h2>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card" data-category="apartments">
+                    <div class="category-icon">
+                        <span class="icon-emoji">🏢</span>
+                    </div>
+                    <h3 class="category-title">Apartments</h3>
+                    <p class="category-desc">Modern living spaces with premium amenities</p>
+                    <div class="category-count">120+ Available</div>
+                </div>
+
+                <div class="category-card" data-category="villas">
+                    <div class="category-icon">
+                        <span class="icon-emoji">🏘️</span>
+                    </div>
+                    <h3 class="category-title">Villas</h3>
+                    <p class="category-desc">Luxury independent houses with gardens</p>
+                    <div class="category-count">45+ Available</div>
+                </div>
+
+                <div class="category-card" data-category="commercial">
+                    <div class="category-icon">
+                        <span class="icon-emoji">🏪</span>
+                    </div>
+                    <h3 class="category-title">Commercial</h3>
+                    <p class="category-desc">Prime retail and office spaces</p>
+                    <div class="category-count">80+ Available</div>
+                </div>
+
+                <div class="category-card" data-category="plots">
+                    <div class="category-icon">
+                        <span class="icon-emoji">📐</span>
+                    </div>
+                    <h3 class="category-title">Plots</h3>
+                    <p class="category-desc">Residential and commercial land</p>
+                    <div class="category-count">30+ Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us-section" id="why-us">
+        <div class="section-container">
+            <div class="why-us-grid">
+                <div class="why-us-content">
+                    <div class="section-tag">Our Advantages</div>
+                    <h2 class="section-title">Why Choose Sai Properties</h2>
+                    <p class="section-text">
+                        With over two decades of experience in real estate, we've built a reputation for excellence, trust, and customer satisfaction. Our commitment to quality and transparency sets us apart.
+                    </p>
+
+                    <div class="advantages-list">
+                        <div class="advantage-item">
+                            <div class="advantage-number">01</div>
+                            <div class="advantage-content">
+                                <h4>Verified Listings</h4>
+                                <p>All properties are thoroughly verified and legally compliant</p>
+                            </div>
+                        </div>
+
+                        <div class="advantage-item">
+                            <div class="advantage-number">02</div>
+                            <div class="advantage-content">
+                                <h4>Expert Guidance</h4>
+                                <p>Dedicated team to assist you at every step of your journey</p>
+                            </div>
+                        </div>
+
+                        <div class="advantage-item">
+                            <div class="advantage-number">03</div>
+                            <div class="advantage-content">
+                                <h4>Best Pricing</h4>
+                                <p>Competitive rates with transparent pricing and zero hidden costs</p>
+                            </div>
+                        </div>
+
+                        <div class="advantage-item">
+                            <div class="advantage-number">04</div>
+                            <div class="advantage-content">
+                                <h4>After-Sales Support</h4>
+                                <p>Continued assistance even after your property purchase</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-us-visual">
+                    <div class="visual-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">✓</div>
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Customer Satisfaction</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">⚡</div>
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Support Available</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🏆</div>
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Awards Won</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-container">
+            <div class="section-heading centered">
+                <div class="section-tag">Visual Tour</div>
+                <h2 class="section-title">Property Gallery</h2>
+                <p class="section-desc">Experience the beauty of our properties</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item tall">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-emoji">🌆</div>
+                    <div class="gallery-label">City Views</div>
+                </div>
+                <div class="gallery-item wide">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-emoji">🏊</div>
+                    <div class="gallery-label">Amenities</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-emoji">🌳</div>
+                    <div class="gallery-label">Gardens</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-emoji">🏋️</div>
+                    <div class="gallery-label">Gym & Spa</div>
+                </div>
+                <div class="gallery-item wide">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-emoji">🏡</div>
+                    <div class="gallery-label">Interiors</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-emoji">🅿️</div>
+                    <div class="gallery-label">Parking</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-tag">Get in Touch</div>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-text">
+                        Ready to find your dream property? Our team is here to help you every step of the way. Reach out to us today!
+                    </p>
+
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <div class="info-title">Visit Us</div>
+                                <div class="info-text">Shop no.15, Sai Manomay,<br>Sector 35D, Kharghar,<br>Navi Mumbai, Maharashtra 410210</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div class="info-content">
+                                <div class="info-title">Call Us</div>
+                                <div class="info-text"><a href="tel:08390676759">083906 76759</a></div>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">⏰</div>
+                            <div class="info-content">
+                                <div class="info-title">Office Hours</div>
+                                <div class="info-text">Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 6:00 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-visual">
+                    <div class="contact-card">
+                        <div class="card-decoration"></div>
+                        <div class="contact-card-content">
+                            <h3>Quick Inquiry</h3>
+                            <p>Looking for something specific? Let us know!</p>
+                            <div class="inquiry-options">
+                                <button class="inquiry-btn">🏢 Apartments</button>
+                                <button class="inquiry-btn">🏘️ Villas</button>
+                                <button class="inquiry-btn">🏪 Commercial</button>
+                                <button class="inquiry-btn">📐 Plots</button>
+                            </div>
+                            <a href="tel:08390676759" class="call-now-btn">
+                                <span>Call Now</span>
+                                <div class="btn-icon">📞</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="brand-icon">S</div>
+                        <div class="brand-text">
+                            <span class="brand-name">Sai Properties</span>
+                            <span class="brand-tagline">Modern Living</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Building dreams, creating homes. Your trusted partner in real estate for over 20 years.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">💼</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#featured">Featured Properties</a>
+                        <a href="#explore">Explore</a>
+                        <a href="#why-us">Why Us</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Categories</h4>
+                        <a href="#explore">Apartments</a>
+                        <a href="#explore">Villas</a>
+                        <a href="#explore">Commercial</a>
+                        <a href="#explore">Plots</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Contact</h4>
+                        <a href="tel:08390676759">083906 76759</a>
+                        <a href="#">info@saiproperties.com</a>
+                        <a href="#">Kharghar, Navi Mumbai</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sai Properties. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <button class="fab" id="fab">
+        <span class="fab-icon">↑</span>
+    </button>
+
+    <script src="sai-properties-script.js"></script>
+</body>
+</html>
