@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Properties | Modern Real Estate Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #64748b;
+            --accent: #f59e0b;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .cta-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            animation: fadeInUp 1.2s;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Stats */
+        .stats {
+            background: var(--bg-light);
+            padding: 3rem 2rem;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        /* Why Us Section */
+        .why-us {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+        }
+
+        .why-us-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .feature-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            height: 300px;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>🏢</span>
+                <span>Sai Properties</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="tel:08390676759" class="cta-btn">📞 Get in Touch</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Discover Your Perfect Space</h1>
+        <p>Experience modern living with Sai Properties. We bring you quality properties in Navi Mumbai's finest locations, including our premium developments in Kharghar Sector 10.</p>
+        <div class="hero-buttons">
+            <a href="#explore" class="btn-primary">View Properties →</a>
+            <a href="#contact" class="btn-secondary">Schedule Visit</a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="service-icon">🏢</div>
+                <h3>Modern Apartments</h3>
+                <p>Starting ₹65L</p>
+            </div>
+            <div class="stat-card">
+                <div class="service-icon">🏘️</div>
+                <h3>Luxury Villas</h3>
+                <p>Premium Living</p>
+            </div>
+            <div class="stat-card">
+                <div class="service-icon">🏪</div>
+                <h3>Commercial Spaces</h3>
+                <p>Prime Locations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section id="explore" class="services">
+        <h2 class="section-title">Explore Options</h2>
+        <p class="section-subtitle">Browse by Category</p>
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Apartments</h3>
+                <p>Modern living spaces with premium amenities in prime Kharghar locations</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏘️</div>
+                <h3>Villas</h3>
+                <p>Luxury independent houses with gardens and spacious layouts</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏪</div>
+                <h3>Commercial</h3>
+                <p>Prime retail and office spaces for your business needs</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📐</div>
+                <h3>Plots</h3>
+                <p>Residential and commercial land in developing areas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us">
+        <div class="why-us-container">
+            <h2 class="section-title">Why Choose Sai Properties</h2>
+            <p class="section-subtitle">Your trusted partner in real estate with years of experience in Navi Mumbai</p>
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-number">01</span>
+                    <h4>Verified Listings</h4>
+                    <p>All properties are thoroughly verified and legally compliant</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-number">02</span>
+                    <h4>Expert Guidance</h4>
+                    <p>Dedicated team to assist you at every step of your journey</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-number">03</span>
+                    <h4>Best Pricing</h4>
+                    <p>Competitive rates with transparent pricing and zero hidden costs</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-number">04</span>
+                    <h4>After-Sales Support</h4>
+                    <p>Continued assistance even after your property purchase</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">Property Gallery</h2>
+        <p class="section-subtitle">Experience our properties in Kharghar Sector 10</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://ik.imagekit.io/99x/realestate/sai-villa-sector-10-kharghar-mumbai-01.jpg" alt="Sai Villa Sector 10">
+                <div class="gallery-overlay">
+                    <h4>Sai Villa</h4>
+                    <p>Kharghar Sector 10</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://mediacdn.99acres.com/media1/16378/11/327576265M-1618554916683.jpg" alt="Sai Malhar Kharghar">
+                <div class="gallery-overlay">
+                    <h4>Sai Malhar</h4>
+                    <p>Premium Amenities</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://mediacdn.99acres.com/media1/16378/11/327576267M-1618554916729.jpg" alt="Sai Prasad Residency">
+                <div class="gallery-overlay">
+                    <h4>Sai Prasad Residency</h4>
+                    <p>Modern Living</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://is1-2.housingcdn.com/01c16c28/9a2b0fdcca9de4d751af05ad37e28a39/v0/medium/2_bhk_apartment-for-sale-kharghar-Navi_Mumbai-others.jpg" alt="Sai Villa Apartments">
+                <div class="gallery-overlay">
+                    <h4>Spacious Apartments</h4>
+                    <p>Quality Construction</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://mediacdn.99acres.com/media1/16378/11/327576268M-1618554916774.jpg" alt="Sai Properties Exterior">
+                <div class="gallery-overlay">
+                    <h4>Prime Location</h4>
+                    <p>Kharghar Sector 10</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://is1-3.housingcdn.com/01c16c28/e17a2ba5b75d09db8b8d6eed63d8cbee/v0/medium/1_bhk_apartment-for-sale-kharghar-Navi_Mumbai-others.jpg" alt="Sai Villa Interior">
+                <div class="gallery-overlay">
+                    <h4>Modern Interiors</h4>
+                    <p>Ready to Move</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h4>📍 Visit Us</h4>
+                <p>Shop no.15, Sai Manomay,<br>
+                Sector 35D, Kharghar,<br>
+                Navi Mumbai, Maharashtra 410210</p>
+            </div>
+            <div class="contact-info">
+                <h4>📞 Call Us</h4>
+                <p><a href="tel:08390676759">083906 76759</a></p>
+                <p>Available for inquiries and site visits</p>
+            </div>
+            <div class="contact-info">
+                <h4>⏰ Office Hours</h4>
+                <p>Mon - Sat: 9:00 AM - 8:00 PM<br>
+                Sunday: 10:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sai Properties</h4>
+                <p>Building dreams, creating homes. Your trusted partner in real estate in Navi Mumbai.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#explore">Explore</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#explore">Apartments</a></li>
+                    <li><a href="#explore">Villas</a></li>
+                    <li><a href="#explore">Commercial</a></li>
+                    <li><a href="#explore">Plots</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:08390676759">083906 76759</a></li>
+                    <li>Kharghar, Navi Mumbai</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Sai Properties. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
